@@ -17,6 +17,27 @@
 
 * { box-sizing: border-box; }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 12px 18px;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
+
 body {
   margin: 0;
   font-family: var(--font);
@@ -24,6 +45,9 @@ body {
   background: var(--paper);
   line-height: 1.6;
   font-size: 16px;
+  border-top: 3px solid var(--accent);
+  background-image: radial-gradient(rgba(17,17,17,0.035) 1px, transparent 1px);
+  background-size: 4px 4px;
 }
 
 .wrap {
@@ -106,8 +130,21 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
-nav a:hover { color: var(--accent); }
+nav a { position: relative; padding-left: 0; transition: padding-left 0.15s ease; }
+nav a::before {
+  content: "";
+  opacity: 0;
+}
+nav a:hover { color: var(--accent); padding-left: 14px; }
+nav a:hover::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  opacity: 1;
+}
 nav a.nav-cta { color: var(--accent); font-weight: 600; }
+nav a.nav-cta:hover { padding-left: 0; }
+nav a.nav-cta:hover::before { content: none; }
 
 .nav-toggle {
   display: none;
@@ -121,7 +158,24 @@ nav a.nav-cta { color: var(--accent); font-weight: 600; }
 }
 
 /* Hero */
-.hero { padding: 84px 0 0; background: var(--paper); }
+.hero { padding: 84px 0 0; background: var(--paper); position: relative; overflow: hidden; }
+.hero-watermark {
+  position: absolute;
+  top: 0.4em;
+  right: -0.08em;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: clamp(3rem, 13vw, 9rem);
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line-soft);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.hero .wrap { position: relative; z-index: 1; }
 .status-line {
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -370,4 +424,14 @@ nav a.nav-cta { color: var(--accent); font-weight: 600; }
   .tier-row-head { flex-direction: column; align-items: flex-start; gap: 8px; }
   .tier-note { margin-left: 0; }
   .proof-num { width: 90px; font-size: 1.3rem; }
+  .hero-watermark { display: none; }
+}
+
+@media print {
+  .site-header, .tech-strip, .nav-toggle, .btn, .skip-link, .hero-watermark { display: none; }
+  body { background: #fff; border-top: none; }
+  .section { border-bottom: 1px solid #ccc; padding: 32px 0; }
+  .section-inverse { background: #fff; color: #000; }
+  .section-inverse h2, .section-inverse h3, .section-inverse p, .section-inverse a { color: #000; }
+  a { text-decoration: underline; }
 }
