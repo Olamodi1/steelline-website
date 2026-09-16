@@ -24,12 +24,18 @@
       </span>
       <span class="logo-text">STEELLINE<span>SECURITY CONSULTING</span></span>
     </a>
-    <nav>
+    <nav id="site-nav">
+      <a href="#why">Why Steelline</a>
       <a href="#services">Services</a>
       <a href="#proof">Proof</a>
+      <a href="#process">Process</a>
       <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -65,7 +71,35 @@
     </div>
   </section>
 
-  <section id="services" class="section">
+  <section id="why" class="section section-why reveal">
+    <div class="wrap why-grid">
+      <div class="why-copy">
+        <p class="kicker">Positioning</p>
+        <h2>Not a generalist</h2>
+        <p class="section-lede">Pure cloud generalists are common. People who can speak fluently about Entra ID lifecycle management, CyberArk PAM onboarding, RBAC least-privilege design, and Azure resource administration in the same breath are not.</p>
+        <p>Security operations and FedRAMP experience — Sentinel SOAR/XSOAR, SCA/POA&amp;M — is the differentiator most consultants at this stage don't have. That combination is what Steelline brings to every engagement.</p>
+      </div>
+      <div class="why-stack">
+        <div class="why-card">
+          <span class="why-num">01</span>
+          <h3>Identity-first</h3>
+          <p>Entra ID, AD, PIM, and Conditional Access are the daily reps — not a side skill bolted onto general cloud work.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-num">02</span>
+          <h3>Compliance-fluent</h3>
+          <p>FedRAMP SCA/POA&amp;M and NIST 800-53 reviews mean the work holds up under audit, not just in production.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-num">03</span>
+          <h3>No headcount required</h3>
+          <p>Engage through the LLC for the scope you need, then step back — no benefits, no ramp-up, no long-term commitment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section reveal">
     <div class="wrap">
       <p class="kicker">What I do</p>
       <h2>Services</h2>
@@ -136,7 +170,7 @@
     </div>
   </section>
 
-  <section id="proof" class="section section-dark">
+  <section id="proof" class="section section-dark reveal">
     <div class="dot-field" aria-hidden="true"></div>
     <div class="wrap">
       <p class="kicker kicker-light">Track record</p>
@@ -171,7 +205,35 @@
     </div>
   </section>
 
-  <section id="about" class="section">
+  <section id="process" class="section reveal">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2>From first call to delivery</h2>
+      <p class="section-lede">A straightforward, documented process — no ambiguity about scope, rate, or timeline.</p>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="process-num">1</span>
+          <h3>Discovery call</h3>
+          <p>A short conversation to understand the environment, the gap, and the timeline — no obligation, no generic pitch deck.</p>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step">
+          <span class="process-num">2</span>
+          <h3>Scoped SOW</h3>
+          <p>Deliverables, rate, and engagement length locked in writing before any work starts. No "general IT support," no vague scope.</p>
+        </div>
+        <div class="process-connector" aria-hidden="true"></div>
+        <div class="process-step">
+          <span class="process-num">3</span>
+          <h3>Embedded delivery</h3>
+          <p>Work executed to your environment's standards, with a written status update — completed, in progress, blockers, next steps — every Friday.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section reveal">
     <div class="wrap about-grid">
       <div>
         <p class="kicker">Who I am</p>
@@ -197,7 +259,37 @@
     </div>
   </section>
 
-  <section id="contact" class="section section-dark section-contact">
+  <section id="faq" class="section section-faq reveal">
+    <div class="wrap">
+      <p class="kicker">Questions</p>
+      <h2>Frequently asked</h2>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What does "C2C" mean, and why work with an LLC instead of hiring direct?</summary>
+          <p>Corp-to-corp: you contract with Steelline Security Consulting LLC rather than hiring an individual. You get senior IAM/Azure capability for a defined scope and timeline, without adding headcount, benefits, or long-term commitment.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do you scope an engagement?</summary>
+          <p>Every engagement starts with a discovery call, followed by a written SOW covering deliverables, rate, and timeline before any billable work begins — see the process above.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's your rate?</summary>
+          <p>$100–$120/hr depending on scope: IAM and CyberArk/PAM work leads at $115/hr, general Azure administration at $100/hr. Rate is confirmed in the SOW before work starts.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Where are you based, and do you work on-site?</summary>
+          <p>Based in McDonough, GA (Atlanta metro). Engagements are remote-first, with on-site availability in the Atlanta metro area as needed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you work with staffing agencies?</summary>
+          <p>Yes — both staffing-agency placements and direct client engagements are in scope.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-dark section-contact reveal">
     <div class="dot-field" aria-hidden="true"></div>
     <div class="wrap contact-wrap">
       <h2>Available for C2C engagements</h2>
@@ -220,5 +312,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
