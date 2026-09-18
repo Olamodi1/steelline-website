@@ -88,28 +88,31 @@
     </div>
     <div class="hero-graphic" aria-hidden="true">
       <svg viewBox="0 0 400 400" width="100%" height="100%">
-        <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <circle class="spin-slow" cx="200" cy="200" r="190" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="2 6"/>
+        <circle class="spin-slow-rev" cx="200" cy="200" r="150" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="1 10"/>
         <circle cx="200" cy="200" r="110" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-        <path d="M200 110 L260 140 V205 C260 245 234 275 200 290 C166 275 140 245 140 205 V140 Z" fill="none" stroke="#ffb648" stroke-width="2.5" stroke-linejoin="round"/>
-        <path d="M178 202 L195 219 L226 182" fill="none" stroke="#ffb648" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="200" cy="200" r="190" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="2 6"/>
+        <path class="pulse-shield" d="M200 110 L260 140 V205 C260 245 234 275 200 290 C166 275 140 245 140 205 V140 Z" fill="none" stroke="#ffb648" stroke-width="2.5" stroke-linejoin="round"/>
+        <path class="draw-check" d="M178 202 L195 219 L226 182" fill="none" stroke="#ffb648" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
   </section>
 
   <section class="tech-strip">
-    <div class="wrap tech-strip-inner">
-      <span>ENTRA ID</span><span>CYBERARK PAM</span><span>AZURE ADMIN</span><span>CONDITIONAL ACCESS</span><span>FEDRAMP SCA / POA&amp;M</span><span>SENTINEL SOAR</span><span>RBAC</span>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>ENTRA ID</span><span>CYBERARK PAM</span><span>AZURE ADMIN</span><span>CONDITIONAL ACCESS</span><span>FEDRAMP SCA / POA&amp;M</span><span>SENTINEL SOAR</span><span>RBAC</span>
+        <span aria-hidden="true">ENTRA ID</span><span aria-hidden="true">CYBERARK PAM</span><span aria-hidden="true">AZURE ADMIN</span><span aria-hidden="true">CONDITIONAL ACCESS</span><span aria-hidden="true">FEDRAMP SCA / POA&amp;M</span><span aria-hidden="true">SENTINEL SOAR</span><span aria-hidden="true">RBAC</span>
+      </div>
     </div>
   </section>
 
-  <section id="services" class="section">
+  <section id="services" class="section reveal">
     <div class="wrap">
       <p class="eyebrow">What I do</p>
       <h2>A tiered stack, from day-one<br>billable work to premium advisory.</h2>
 
       <div class="service-grid">
-        <div class="service-card">
+        <div class="service-card reveal-item">
           <div class="service-icon" style="--accent:#ffb648">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z"/><path d="M9 12 L11 14 L15.5 9.5"/></svg>
           </div>
@@ -117,7 +120,7 @@
           <h3>IAM &amp; Azure administration</h3>
           <p>Entra ID &amp; AD lifecycle management, MFA/Okta enrollment, RBAC least-privilege design, Azure resource administration, CyberArk PAM onboarding, ServiceNow ITSM.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal-item">
           <div class="service-icon" style="--accent:#6ee7d8">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2 V6 M12 18 V22 M4.9 4.9 L7.8 7.8 M16.2 16.2 L19.1 19.1 M2 12 H6 M18 12 H22 M4.9 19.1 L7.8 16.2 M16.2 7.8 L19.1 4.9"/></svg>
           </div>
@@ -125,7 +128,7 @@
           <h3>Security operations &amp; FedRAMP</h3>
           <p>Sentinel SOAR/XSOAR playbooks, Splunk playbooks, FedRAMP SCA + POA&amp;M, Azure DevOps CI/CD with compliance gates, Palo Alto Panorama.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal-item">
           <div class="service-icon" style="--accent:#9ab8ff">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17 L10 11 L14 15 L20 9"/><path d="M20 15 V9 H14"/></svg>
           </div>
@@ -133,7 +136,7 @@
           <h3>Automation &amp; compliance</h3>
           <p>Intune endpoint compliance, Terraform IaC, PowerShell/Bash automation, backup &amp; DR validation, NIST 800-53 / ISO 27001 reviews.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal-item">
           <div class="service-icon" style="--accent:#e39bff">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 L21 7.5 L12 12 L3 7.5 Z"/><path d="M3 12 L12 16.5 L21 12 M3 16.5 L12 21 L21 16.5"/></svg>
           </div>
@@ -145,57 +148,57 @@
     </div>
   </section>
 
-  <section id="proof" class="section section-dark">
+  <section id="proof" class="section section-dark reveal">
     <div class="wrap">
       <p class="eyebrow eyebrow-light">Track record</p>
       <h2>Provable results.<br>Nothing rounded up.</h2>
 
       <div class="stat-grid">
-        <div class="stat-card">
-          <p class="stat-num">200<span>+</span></p>
+        <div class="stat-card reveal-item">
+          <p class="stat-num"><span class="stat-count" data-count="200">0</span><span>+</span></p>
           <p class="stat-desc">users under full hybrid Azure/on-prem identity lifecycle management, with 95% first-contact resolution</p>
         </div>
-        <div class="stat-card">
-          <p class="stat-num">15<span>%</span></p>
+        <div class="stat-card reveal-item">
+          <p class="stat-num"><span class="stat-count" data-count="15">0</span><span>%</span></p>
           <p class="stat-desc">reduction in privileged account onboarding time via CyberArk PAM workflow optimization</p>
         </div>
-        <div class="stat-card">
-          <p class="stat-num">20<span>%</span></p>
+        <div class="stat-card reveal-item">
+          <p class="stat-num"><span class="stat-count" data-count="20">0</span><span>%</span></p>
           <p class="stat-desc">reduction in malware incidents via Palo Alto Panorama deployment</p>
         </div>
-        <div class="stat-card">
-          <p class="stat-num">~40<span>%</span></p>
+        <div class="stat-card reveal-item">
+          <p class="stat-num">~<span class="stat-count" data-count="40">0</span><span>%</span></p>
           <p class="stat-desc">reduction in manual operational tasks across 200+ endpoints via PowerShell automation</p>
         </div>
-        <div class="stat-card">
-          <p class="stat-num">30<span>+</span></p>
+        <div class="stat-card reveal-item">
+          <p class="stat-num"><span class="stat-count" data-count="30">0</span><span>+</span></p>
           <p class="stat-desc">IT general controls reviewed against NIST 800-53 / ISO 27001 Annex A</p>
         </div>
-        <div class="stat-card stat-card-accent">
+        <div class="stat-card stat-card-accent reveal-item">
           <p class="stat-desc stat-desc-large">FedRAMP Security Control Assessments, POA&amp;M support, and Sentinel SOAR/XSOAR integration delivered in production enterprise environments.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="process" class="section">
+  <section id="process" class="section reveal">
     <div class="wrap">
       <p class="eyebrow">How it works</p>
       <h2>From first call to delivery.</h2>
       <p class="section-lede">A straightforward, documented process — no ambiguity about scope, rate, or timeline.</p>
 
       <div class="process-grid">
-        <div class="process-card">
+        <div class="process-card reveal-item">
           <span class="process-num">01</span>
           <h3>Discovery call</h3>
           <p>A short conversation to understand the environment, the gap, and the timeline — no obligation, no generic pitch deck.</p>
         </div>
-        <div class="process-card">
+        <div class="process-card reveal-item">
           <span class="process-num">02</span>
           <h3>Scoped SOW</h3>
           <p>Deliverables, rate, and engagement length locked in writing before any work starts. No "general IT support," no vague scope.</p>
         </div>
-        <div class="process-card">
+        <div class="process-card reveal-item">
           <span class="process-num">03</span>
           <h3>Embedded delivery</h3>
           <p>Work executed to your environment's standards, with a written status update every Friday — completed, in progress, blockers, next steps.</p>
@@ -204,7 +207,7 @@
     </div>
   </section>
 
-  <section id="about" class="section section-dark">
+  <section id="about" class="section section-dark reveal">
     <div class="wrap about-grid">
       <div>
         <p class="eyebrow eyebrow-light">About</p>
@@ -226,7 +229,7 @@
     </div>
   </section>
 
-  <section id="faq" class="section">
+  <section id="faq" class="section reveal">
     <div class="wrap">
       <p class="eyebrow">FAQ</p>
       <h2>Frequently asked.</h2>
@@ -256,7 +259,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section section-dark section-contact">
+  <section id="contact" class="section section-dark section-contact reveal">
     <div class="wrap contact-wrap">
       <p class="eyebrow eyebrow-light">Contact</p>
       <h2>Available for C2C<br>engagements.</h2>
