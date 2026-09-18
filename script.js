@@ -24,6 +24,12 @@
       el.textContent = target;
       return;
     }
+    // If the tab is backgrounded, rAF won't fire — just set the final value
+    // instead of leaving the counter stuck at 0 until it becomes visible.
+    if (document.hidden) {
+      el.textContent = target;
+      return;
+    }
     var start = 0;
     var duration = 1100;
     var startTime = null;
