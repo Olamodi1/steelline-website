@@ -13,6 +13,12 @@ async function run() {
     .png()
     .toFile('logo-horizontal-1128x260.png');
 
+  // LinkedIn cover banner (1128x191 recommended)
+  await sharp('logo-cover.svg', { density: 300 })
+    .resize(1128, 191)
+    .png()
+    .toFile('logo-cover-1128x191.png');
+
   console.log('done');
 }
 

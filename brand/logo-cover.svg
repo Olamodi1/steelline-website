@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 191">
+  <rect width="1128" height="191" fill="#111111"/>
+  <g transform="translate(70, 30)">
+    <path d="M65 0 L99 13.5 V66 C99 88.5 84.5 106 65 115 C45.5 106 31 88.5 31 66 V13.5 Z"
+          fill="none" stroke="#ffb648" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M48 67 L61 80 L85 53" fill="none" stroke="#ffb648"
+          stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="200" y="95" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="52"
+        font-weight="700" fill="#f5f5f0" letter-spacing="1.5">STEELLINE</text>
+  <text x="200" y="128" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="19"
+        fill="#ffb648" letter-spacing="4">SECURITY CONSULTING</text>
+  <text x="700" y="112" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="17"
+        fill="#9a9a92" letter-spacing="0.5">Identity &amp; Azure security consulting —</text>
+  <text x="700" y="136" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="17"
+        fill="#9a9a92" letter-spacing="0.5">IAM, CyberArk PAM, RBAC design.</text>
+</svg>
