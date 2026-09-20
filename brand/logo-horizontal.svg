@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 260">
+  <rect width="1128" height="260" fill="#111111"/>
+  <g transform="translate(50, 30)">
+    <path d="M100 0 L152 21 V102 C152 137 130.5 164.5 100 177 C69.5 164.5 48 137 48 102 V21 Z"
+          fill="none" stroke="#ffb648" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M74 104 L94 124 L131 82" fill="none" stroke="#ffb648"
+          stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="230" y="150" font-family="'IBM Plex Mono', 'Courier New', monospace" font-size="70"
+        font-weight="700" fill="#f5f5f0" letter-spacing="2">STEELLINE</text>
+  <text x="230" y="195" font-family="'IBM Plex Sans', Arial, sans-serif" font-size="26"
+        fill="#ffb648" letter-spacing="6">SECURITY CONSULTING</text>
+</svg>
