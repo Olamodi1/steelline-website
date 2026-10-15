@@ -1,0 +1,131 @@
+/* ============================================================
+   Steelline — modern motion & polish layer (additive to style.css)
+   ============================================================ */
+html { scroll-behavior: smooth; }
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0;
+  background: linear-gradient(90deg, var(--accent), #ffd79a);
+  box-shadow: 0 0 12px rgba(255,182,72,.5);
+  z-index: 60; transition: width .08s linear;
+}
+
+/* Header gains depth on scroll */
+.site-header { transition: box-shadow .3s ease, background .3s ease; }
+.site-header.scrolled {
+  box-shadow: 0 8px 30px rgba(23,24,26,.10);
+  background: rgba(246,245,242,.96);
+}
+
+/* ---- Hero: animated aurora glow + faint grid ---- */
+.hero { isolation: isolate; }
+.hero::before {
+  content: ""; position: absolute; inset: -25% -15% -15% -15%; z-index: 0;
+  background:
+    radial-gradient(42% 42% at 72% 22%, rgba(255,182,72,.22), transparent 70%),
+    radial-gradient(40% 42% at 18% 82%, rgba(110,231,216,.14), transparent 72%),
+    radial-gradient(35% 35% at 55% 60%, rgba(154,184,255,.10), transparent 72%);
+  filter: blur(8px);
+  animation: aurora 18s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(75% 65% at 32% 42%, #000 25%, transparent 78%);
+          mask-image: radial-gradient(75% 65% at 32% 42%, #000 25%, transparent 78%);
+  pointer-events: none;
+}
+.hero .wrap, .hero-graphic { position: relative; z-index: 1; }
+@keyframes aurora {
+  0%   { transform: translate(0,0) scale(1); }
+  100% { transform: translate(-5%, 4%) scale(1.1); }
+}
+
+/* Hero content load-in cascade */
+.hero .eyebrow-pill,
+.hero h1,
+.hero .hero-benefits,
+.hero .lede,
+.hero .hero-actions { animation: heroUp .85s cubic-bezier(.2,.7,.2,1) both; }
+.hero h1            { animation-delay: .07s; }
+.hero .hero-benefits{ animation-delay: .15s; }
+.hero .lede         { animation-delay: .23s; }
+.hero .hero-actions { animation-delay: .31s; }
+@keyframes heroUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+/* Live-status dot in the "now booking" pill */
+.eyebrow-pill::before {
+  content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); margin-right: 9px; vertical-align: middle;
+  animation: ping 2.2s ease-out infinite;
+}
+@keyframes ping {
+  0%   { box-shadow: 0 0 0 0 rgba(255,182,72,.55); }
+  70%  { box-shadow: 0 0 0 8px rgba(255,182,72,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,182,72,0); }
+}
+
+/* Buttons: arrow nudge + sheen */
+.btn { position: relative; overflow: hidden; }
+.btn-primary::after, .btn-outline::after, .btn-ghost-accent::after, .nav-cta::after { content: ""; }
+.btn::before {
+  content: ""; position: absolute; top: 0; left: -120%; width: 55%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+  transform: skewX(-18deg); transition: left .6s ease;
+}
+.btn:hover::before { left: 140%; }
+.btn-ghost-accent { background: transparent; color: var(--accent); border: 1px solid rgba(255,182,72,.42); }
+.btn-ghost-accent:hover { background: rgba(255,182,72,.12); border-color: var(--accent); transform: translateY(-2px); }
+
+/* ---- Cards: perspective tilt + accent-border glow + sheen ---- */
+.service-grid, .stat-grid, .process-grid { perspective: 1000px; }
+.service-card, .process-card, .stat-card {
+  position: relative; overflow: hidden;
+  transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, background .25s ease;
+  will-change: transform;
+}
+.service-card::after, .process-card::after, .stat-card::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+  background: linear-gradient(135deg, var(--accent), transparent 45%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity .3s ease; pointer-events: none;
+}
+.service-card:hover::after, .process-card:hover::after, .stat-card:hover::after { opacity: 1; }
+.service-icon { transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease; }
+.service-card:hover .service-icon { transform: translateY(-3px) rotate(-5deg); box-shadow: 0 8px 20px rgba(255,182,72,.35); }
+.process-card:hover .process-num { color: var(--white); transition: color .25s ease; }
+
+/* Reveal: add gentle blur-in + nicer easing */
+.reveal {
+  transition: opacity .75s cubic-bezier(.2,.7,.2,1), transform .75s cubic-bezier(.2,.7,.2,1), filter .75s ease;
+  filter: blur(5px);
+}
+.reveal-visible { filter: blur(0); }
+.reveal-item { transition: opacity .55s cubic-bezier(.2,.7,.2,1), transform .55s cubic-bezier(.2,.7,.2,1); }
+
+/* Marquee: edge fade so it reads as motion, not a hard cut */
+.tech-strip { position: relative; }
+.tech-strip::before, .tech-strip::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 90px; z-index: 2; pointer-events: none;
+}
+.tech-strip::before { left: 0; background: linear-gradient(90deg, var(--black), transparent); }
+.tech-strip::after  { right: 0; background: linear-gradient(270deg, var(--black), transparent); }
+
+/* Links: animated underline */
+.contact-line a, .faq-item summary { position: relative; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero::before, .eyebrow-pill::before { animation: none; }
+  .hero .eyebrow-pill, .hero h1, .hero .hero-benefits, .hero .lede, .hero .hero-actions { animation: none; }
+  .reveal { filter: none; }
+  .btn::before { display: none; }
+  .scroll-progress { display: none; }
+}
