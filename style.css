@@ -330,3 +330,12 @@ nav a.nav-cta:hover { background: var(--accent); color: var(--paper-ink); transf
   .section-dark h2, .section-dark h3, .section-dark p, .hero h1, .hero .lede, .hero-benefits { color: #000 !important; }
   a { text-decoration: underline; }
 }
+
+/* Architecture diagrams */
+.arch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 40px; }
+.arch-grid-feature { grid-template-columns: 1fr; }
+.arch-card { margin: 0; background: #161616; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 14px; }
+.arch-card img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.arch-card figcaption { margin-top: 12px; font-size: 0.9rem; line-height: 1.5; color: rgba(255,255,255,0.7); }
+.arch-card figcaption a { color: var(--accent); }
+.arch-subhead { margin-top: 56px; color: #fff; font-size: 1.25rem; }

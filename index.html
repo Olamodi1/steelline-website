@@ -56,6 +56,7 @@
     <a href="#top" class="logo"><img src="brand/logo-icon.svg" alt="" class="logo-mark" width="28" height="28">Steelline<span>.</span></a>
     <nav id="site-nav">
       <a href="#services">Services</a>
+      <a href="#architecture">Architecture</a>
       <a href="#partnerships">Partnerships</a>
       <a href="#proof">Track record</a>
       <a href="#process">Process</a>
@@ -147,6 +148,41 @@
           <h3>Advisory</h3>
           <p>Identity governance program design, PAM strategy, hybrid AD → Entra ID migration planning, conditional access architecture, IAM audit readiness.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="architecture" class="section section-dark reveal">
+    <div class="wrap">
+      <p class="eyebrow eyebrow-light">Architecture</p>
+      <h2>Built, documented,<br>and verifiable.</h2>
+      <p class="section-lede">Designs from Steelline's own Azure labs, each backed by a public repository.</p>
+
+      <div class="arch-grid arch-grid-feature">
+        <figure class="arch-card reveal-item">
+          <a href="brand/diagrams/iac-lab-network.svg" target="_blank" rel="noopener"><img src="brand/diagrams/iac-lab-network.svg" alt="Terraform-provisioned Azure resource group with a VNet, subnet, network security group and virtual machine" loading="lazy" width="800" height="480"></a>
+          <figcaption>Azure infrastructure as code: VNet, subnet, NSG and VM provisioned with Terraform modules and remote state. <a href="https://github.com/Olamodi1/azure-infra-ops-lab" target="_blank" rel="noopener">View repo →</a></figcaption>
+        </figure>
+        <figure class="arch-card reveal-item">
+          <a href="brand/diagrams/entra-lifecycle.svg" target="_blank" rel="noopener"><img src="brand/diagrams/entra-lifecycle.svg" alt="Identity lifecycle flow from request through PowerShell and Microsoft Graph automation into Entra ID, with governance outputs" loading="lazy" width="800" height="374"></a>
+          <figcaption>Entra ID lifecycle automation: onboarding, offboarding, RBAC audits and Conditional Access exports. <a href="https://github.com/Olamodi1/entraid-automation" target="_blank" rel="noopener">View repo →</a></figcaption>
+        </figure>
+        <figure class="arch-card reveal-item">
+          <a href="brand/diagrams/monitoring-alerting.svg" target="_blank" rel="noopener"><img src="brand/diagrams/monitoring-alerting.svg" alt="Monitoring flow from log sources into Log Analytics KQL detections, alert rules and automated remediation" loading="lazy" width="800" height="374"></a>
+          <figcaption>Monitoring and alerting: Log Analytics, KQL detections, severity-tiered alerts and automated VM remediation. <a href="https://github.com/Olamodi1/azure-monitoring-setup" target="_blank" rel="noopener">View repo →</a></figcaption>
+        </figure>
+      </div>
+
+      <h3 class="arch-subhead">Patterns we implement</h3>
+      <div class="arch-grid">
+        <figure class="arch-card reveal-item">
+          <a href="brand/diagrams/pattern-hub-spoke.svg" target="_blank" rel="noopener"><img src="brand/diagrams/pattern-hub-spoke.svg" alt="Hub-spoke network pattern: hub VNet with gateway, firewall and Bastion peered to two spoke VNets" loading="lazy" width="800" height="480"></a>
+          <figcaption>Hub-spoke network topology. Reference: <a href="https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke" target="_blank" rel="noopener">Microsoft Azure Architecture Center</a>.</figcaption>
+        </figure>
+        <figure class="arch-card reveal-item">
+          <a href="brand/diagrams/pattern-hybrid-identity.svg" target="_blank" rel="noopener"><img src="brand/diagrams/pattern-hybrid-identity.svg" alt="Hybrid identity pattern: on-premises AD DS synchronized to Entra ID with Conditional Access, MFA and PIM" loading="lazy" width="800" height="358"></a>
+          <figcaption>Hybrid identity with Entra ID. Reference: <a href="https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/identity/azure-ad" target="_blank" rel="noopener">Microsoft Azure Architecture Center</a>.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -315,6 +351,7 @@
     <div class="footer-col">
       <p class="footer-heading">Site</p>
       <a href="#services">Services</a>
+      <a href="#architecture">Architecture</a>
       <a href="#partnerships">Partnerships</a>
       <a href="#proof">Track record</a>
       <a href="#process">Process</a>
