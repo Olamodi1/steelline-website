@@ -30,3 +30,15 @@
     card.addEventListener('mouseleave', function () { card.style.transform = ''; });
   });
 })();
+
+// Copy-email button: copies the address and confirms inline.
+(function () {
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var label = btn.textContent;
+      var done = function (ok) { btn.textContent = ok ? 'Copied' : btn.dataset.copy; setTimeout(function () { btn.textContent = label; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(btn.dataset.copy).then(function () { done(true); }, function () { done(false); });
+      else done(false);
+    });
+  });
+})();

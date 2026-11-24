@@ -339,3 +339,11 @@ nav a.nav-cta:hover { background: var(--accent); color: var(--paper-ink); transf
 .arch-card figcaption { margin-top: 12px; font-size: 0.9rem; line-height: 1.5; color: rgba(255,255,255,0.7); }
 .arch-card figcaption a { color: var(--accent); }
 .arch-subhead { margin-top: 56px; color: #fff; font-size: 1.25rem; }
+
+/* Services self-service link + browser email options */
+.services-note { margin-top: 32px; font-size: 0.95rem; color: var(--paper-ink); }
+.services-note a { font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.email-options { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 20px; font-size: 0.9rem; }
+.email-options span { color: rgba(255,255,255,0.7); margin-right: 4px; }
+.email-options .btn { padding: 8px 18px; font-size: 0.9rem; cursor: pointer; font-family: inherit; }
+.site-footer .logo { color: var(--white); }
